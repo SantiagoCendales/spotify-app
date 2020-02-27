@@ -1,0 +1,14 @@
+@import './../../../../styles.scss';
+
+.container {
+    width: $container-width;
+    margin: 0 auto;
+}
+
+.logo img {
+    width: 160px;
+}
+header {
+    background-color: rgb(38, 38, 40);
+    padding: 15px 40px;
+}

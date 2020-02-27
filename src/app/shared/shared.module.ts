@@ -5,9 +5,14 @@ import { HeaderComponent } from './components/header/header.component';
 
 
 @NgModule({
-  declarations: [HeaderComponent],
+  declarations: [
+    HeaderComponent
+  ],
+  exports: [
+    HeaderComponent
+  ],
   imports: [
-    CommonModule
+    CommonModule,
   ]
 })
 export class SharedModule { }
