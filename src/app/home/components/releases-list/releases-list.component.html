@@ -1,1 +1,18 @@
-<p>releases-list works!</p>
+<div class="content-container">
+    <div class="container">
+        <h1 class="title">New releases</h1>
+        <div class="release-list">
+            <div *ngFor="let single of singles">
+                <div class="release-card">
+                    <div class="image-container">
+                        <img [src]="single.image" alt="">
+                    </div>
+                    <div class="release-info">
+                        <h4>{{ single.title }}</h4>
+                        <h5>{{ single.artist }}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

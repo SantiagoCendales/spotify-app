@@ -7,6 +7,69 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReleasesListComponent implements OnInit {
 
+  singles = [
+    {
+      image: '/assets/images/test.jpg',
+      title: 'Truth is a beatiful...',
+      artist: 'London grammar'
+    },
+    {
+      image: '/assets/images/test.jpg',
+      title: 'Truth is a beatiful...',
+      artist: 'London grammar'
+    },
+    {
+      image: '/assets/images/test.jpg',
+      title: 'Truth is a beatiful...',
+      artist: 'London grammar'
+    },
+    {
+      image: '/assets/images/test.jpg',
+      title: 'Truth is a beatiful...',
+      artist: 'London grammar'
+    },
+    {
+      image: '/assets/images/test.jpg',
+      title: 'Truth is a beatiful...',
+      artist: 'London grammar'
+    },
+    {
+      image: '/assets/images/test.jpg',
+      title: 'Truth is a beatiful...',
+      artist: 'London grammar'
+    },
+    {
+      image: '/assets/images/test.jpg',
+      title: 'Truth is a beatiful...',
+      artist: 'London grammar'
+    },
+    {
+      image: '/assets/images/test.jpg',
+      title: 'Truth is a beatiful...',
+      artist: 'London grammar'
+    },
+    {
+      image: '/assets/images/test.jpg',
+      title: 'Truth is a beatiful...',
+      artist: 'London grammar'
+    },
+    {
+      image: '/assets/images/test.jpg',
+      title: 'Truth is a beatiful...',
+      artist: 'London grammar'
+    },
+    {
+      image: '/assets/images/test.jpg',
+      title: 'Truth is a beatiful...',
+      artist: 'London grammar'
+    },
+    {
+      image: '/assets/images/test.jpg',
+      title: 'Truth is a beatiful...',
+      artist: 'London grammar'
+    },
+  ];
+
   constructor() { }
 
   ngOnInit(): void {

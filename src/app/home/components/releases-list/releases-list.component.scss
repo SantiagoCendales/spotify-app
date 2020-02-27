@@ -1,0 +1,51 @@
+.content-container {
+    background-color: rgb(21, 22, 24);
+}
+
+
+@import '../../../../styles.scss';
+
+.container {
+    max-width: $container-width;
+    margin: 0 auto;
+}
+
+.title {
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 150px;
+    text-align: center;
+}
+
+h4 {
+    margin: 10px 0 5px 0;
+    font-weight: 400;
+}
+
+h5 {
+    color: rgb(143, 142, 148);
+    font-weight: 400;
+    margin: 0;
+}
+
+.release-list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 20px;
+    /* max-width: 1600px; */
+    margin: 0 auto;
+    color: white;
+    padding: 50px 100px;
+}
+
+.image-container {
+    width: 100%;
+    overflow: hidden;
+    height: 200px;
+}
+.image-container > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
