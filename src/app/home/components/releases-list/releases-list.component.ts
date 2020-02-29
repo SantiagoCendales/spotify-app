@@ -10,13 +10,13 @@ export class ReleasesListComponent implements OnInit {
 
 
   releases: any;
+  dataToken: any;
 
   constructor(
     private spotifyService: SpotifyService
   ) { }
 
   ngOnInit(): void {
-    this.spotifyService.getToken();
     this.fetchNewReleases();
   }
 
