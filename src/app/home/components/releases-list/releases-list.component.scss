@@ -42,11 +42,36 @@ h5 {
 .image-container {
     width: 100%;
     overflow: hidden;
-    height: 200px;
 }
-.image-container > img {
+.image-container > div >img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     border-radius: 10px;
 }
+
+@media only screen and (max-width: 1024px){
+  .container {
+    width: 100%;
+  }
+  .release-list {
+      grid-template-columns: repeat(4, 1fr);
+      padding: 30px 50px;
+      grid-gap: 25px;
+  }
+}
+@media only screen and (max-width: 767px){
+  .release-list {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 30px 30px;
+      grid-gap: 25px;
+  }
+}
+@media only screen and (max-width: 480px){
+  .release-list {
+      grid-template-columns: repeat(1, 1fr);
+      padding: 30px 30px;
+      grid-gap: 25px;
+  }
+}
+@media only screen and (max-width: 320px){}
