@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SpotifyService } from '../../../core/spotify.service';
 
 @Component({
   selector: 'app-releases-list',
@@ -7,72 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReleasesListComponent implements OnInit {
 
-  singles = [
-    {
-      image: '/assets/images/test.jpg',
-      title: 'Truth is a beatiful...',
-      artist: 'London grammar'
-    },
-    {
-      image: '/assets/images/test.jpg',
-      title: 'Truth is a beatiful...',
-      artist: 'London grammar'
-    },
-    {
-      image: '/assets/images/test.jpg',
-      title: 'Truth is a beatiful...',
-      artist: 'London grammar'
-    },
-    {
-      image: '/assets/images/test.jpg',
-      title: 'Truth is a beatiful...',
-      artist: 'London grammar'
-    },
-    {
-      image: '/assets/images/test.jpg',
-      title: 'Truth is a beatiful...',
-      artist: 'London grammar'
-    },
-    {
-      image: '/assets/images/test.jpg',
-      title: 'Truth is a beatiful...',
-      artist: 'London grammar'
-    },
-    {
-      image: '/assets/images/test.jpg',
-      title: 'Truth is a beatiful...',
-      artist: 'London grammar'
-    },
-    {
-      image: '/assets/images/test.jpg',
-      title: 'Truth is a beatiful...',
-      artist: 'London grammar'
-    },
-    {
-      image: '/assets/images/test.jpg',
-      title: 'Truth is a beatiful...',
-      artist: 'London grammar'
-    },
-    {
-      image: '/assets/images/test.jpg',
-      title: 'Truth is a beatiful...',
-      artist: 'London grammar'
-    },
-    {
-      image: '/assets/images/test.jpg',
-      title: 'Truth is a beatiful...',
-      artist: 'London grammar'
-    },
-    {
-      image: '/assets/images/test.jpg',
-      title: 'Truth is a beatiful...',
-      artist: 'London grammar'
-    },
-  ];
 
-  constructor() { }
+  releases: any;
+  dataToken: any;
+
+  constructor(
+    private spotifyService: SpotifyService
+  ) { }
 
   ngOnInit(): void {
+    this.fetchNewReleases();
+  }
+
+  fetchNewReleases() {
+    this.spotifyService.getNewReleases()
+    .subscribe(item => {
+      this.releases = item;
+    });
   }
 
 }

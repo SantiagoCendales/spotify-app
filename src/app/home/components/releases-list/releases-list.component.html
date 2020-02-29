@@ -2,14 +2,16 @@
     <div class="container">
         <h1 class="title">New releases</h1>
         <div class="release-list">
-            <div *ngFor="let single of singles">
-                <div class="release-card">
-                    <div class="image-container">
-                        <img [src]="single.image" alt="">
+            <div *ngFor="let release of releases" class="release-card">
+                <div class="image-container">
+                    <div *ngFor="let image of release.images; index as i">
+                        <img  *ngIf="i < 1" [src]="image.url" alt="" class="image" style="width: 100%;">
                     </div>
-                    <div class="release-info">
-                        <h4>{{ single.title }}</h4>
-                        <h5>{{ single.artist }}</h5>
+                </div>
+                <div class="release-info">
+                    <h4>{{ release.name | slice:0:16 }}</h4>
+                    <div *ngFor="let artist of release.artists">
+                        <h5>{{ artist.name }}</h5>
                     </div>
                 </div>
             </div>
