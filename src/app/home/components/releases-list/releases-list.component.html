@@ -4,8 +4,8 @@
         <div class="release-list">
             <div *ngFor="let release of releases" class="release-card">
                 <div class="image-container">
-                    <div *ngFor="let image of release.images">
-                        <img [src]="image.url" alt="" class="image" style="width: 100%;">
+                    <div *ngFor="let image of release.images; index as i">
+                        <img  *ngIf="i < 1" [src]="image.url" alt="" class="image" style="width: 100%;">
                     </div>
                 </div>
                 <div class="release-info">
