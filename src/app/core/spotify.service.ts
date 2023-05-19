@@ -11,8 +11,7 @@ export class SpotifyService {
     private httpClient: HttpClient
   ) { }
 
-  clientId = '978b3f7580f143f9ba41c41489abc026';
-  clientSecret = '04dad104d4e3442098c4aef22ff25439';
+  // TODO: Falta poner clientId y secretId
 
   requestResponse: any;
 
